@@ -54,9 +54,11 @@ iframe {
 }
 
 /* ++++++++++++ Modal +++++++++++*/
-
+#restaurant{
+  margin-top: 50px;
+}
 #modal-food {
-  width: 92%;
+  width: 86%;
 }
 
 .modal-content {
