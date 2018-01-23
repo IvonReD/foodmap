@@ -17,7 +17,7 @@
 
 #splash>h1 {
   margin-top: 40vh;
-  color: #795b17;
+  color: #b59241;
 }
 
 /* ++++++++++++ Contenido +++++++++++*/
@@ -28,7 +28,7 @@
 }
 
 .container-fluid>h1, .container-fluid>h3 {
-  color: #795b17;
+  color: #b59241;
 }
 
 iframe {
@@ -55,11 +55,15 @@ iframe {
 
 /* ++++++++++++ Modal +++++++++++*/
 
+#modal-food {
+  width: 92%;
+}
+
 .modal-content {
-  background: rgba(67, 68, 23, 0.9);
+  background: rgba(184, 157, 64, 0.9);
   color: white;
 }
 
 .modal-header {
-  background: rgb(108, 70, 12);
+  background: rgba(184, 157, 64, 0.9);
 }
