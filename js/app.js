@@ -60,10 +60,10 @@ function printHtml(restaurant) {
  
 /* +++++++ Modal +++++ */
 
-  $("#btn-card").click(function(){
-      $("#myModal").modal(show); 
-      var $modalTitle = 
-  });
+  // $("#btn-card").click(function(){
+  //     $("#myModal").modal(show); 
+  //     var $modalTitle = 
+  // });
 
 
 }
