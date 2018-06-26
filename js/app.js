@@ -11,45 +11,78 @@ $(document).ready(function() {
 });
 
 
-/*--------- Pintar Informacion ----------*/
-var container = $("#restaurant");
-var modal = $(".modal");
+/*--------- Filtrado en imput ----------*/
 
-function infoOfFood() {
-  for (var i = 0; i < data.length; i++) {
-    var cont = $("</div>");
-    cont.addClass("col-xs-12 col-xs-offset-2 cont-food");
-    cont.attr("data-type", data[i].type);
-    cont.attr("data-toggle", "modal");
-    cont.attr("data-targe", "#modal-food");
-    container.append(cont);
+$("#searcher").keydown(filterOpc);
 
-    var textFood = $("</p>");
-    textFood.addClass("nameFood");
-    textFood.text(data[i].name);
-    cont.append(textFood);
-
-    var images = $("<img/>");
-    images.addClass("img-restaurant");
-    images.attr("src", data[i].image);
-    cont.append(images);
-
-  }
+function filterOpc() {
+  var searchOption = $("#searcher").val().toLowerCase();
+  if($("#searcher").val().trim().length > 0) {
+      var filteredData = data.filter(function(restaurant) {
+         console.log(restaurant);
+          return restaurant.type.toLowerCase().indexOf(searchOption) >= 0; 
+      });
+      $("#section-food").empty();
+      filteredData.forEach(function(restaurant){
+        printHtml(restaurant);
+      });
+    } else {
+      $("#section-food").empty();
+      data.forEach(function(restaurant){
+        printHtml(restaurant);
+      });
+}
 }
 
-infoOfFood();
+
+/*--------- Pintar Informacion ----------*/
+function printHtml(restaurant) {
+   // crear elementos con DOM
+  var $divCard = $("<div />", { "class": "col-lg-12 col-xs-2 card","width": "250px"});
+  var $cardBody = $("<div />", { "class": "card-body"});
+  var $restaurantName = $("<h4 />", { "class": "card-title"}).css("color", "yellow");
+  var $imgLogo = $("<img />", {"width": "200px", "height": "200px ","class": "center", "src": restaurant.image});
+  var $button = $('<input type="button" value="Informacion" id="btn-card" data-toggle="modal" data-target="#myModal"/>',{"class":"btn btn-primary"});
+ 
+  
+  //Pintar la informacion 
+  $restaurantName.text(restaurant.name);
+
+  //Agregar a los nodos padre
+  $cardBody.append($restaurantName);
+  $cardBody.append($imgLogo);
+  $cardBody.append($button);
+  $divCard.append($cardBody);
+  
+ 
+ // imprimir en el html
+  $("#section-food").prepend($divCard);
+ 
 /* +++++++ Modal +++++ */
 
-$(".cont-food").on("click", function() {
-  for (i = 0; i < data.length; i++) {
-    if ($(this).data("type") === data[i].type) {
-      $(".modal-title").text(data[i].name);
-      $(".img-food").attr("src", data[i].image);
-      $(".adress").text(data[i].address);
-      $(".description").text(data[i].description);
-      $(".price").text(data[i].money);
-      $(".service").text(data[i].type);
+  $("#btn-card").click(function(){
+      $("#myModal").modal(show); 
+      var $modalTitle = 
+  });
 
-    }
-  }
-});
+
+}
+
+
+
+
+
+
+// $(".cont-food").on("click", function() {
+//   for (i = 0; i < data.length; i++) {
+//     if ($(this).data("type") === data[i].type) {
+//       $(".modal-title").text(data[i].name);
+//       $(".img-food").attr("src", data[i].image);
+//       $(".adress").text(data[i].address);
+//       $(".description").text(data[i].description);
+//       $(".price").text(data[i].money);
+//       $(".service").text(data[i].type);
+
+//     }
+//   }
+// });

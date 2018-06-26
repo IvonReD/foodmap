@@ -1,6 +1,6 @@
 var data = [{
     'name': 'Tacos Mexicanos',
-    'image': '../assets/images/tacos.jpg',
+    'image': './assets/images/tacos.jpg',
     'description': 'Todo tipo de Tacos',
     'address': 'Av. Juarez No.34, Cd. Mexico',
     'money': '$100',
@@ -8,7 +8,7 @@ var data = [{
   },
   {
     'name': 'La Garnacha',
-    'image': '../assets/images/mex.jpg',
+    'image': './assets/images/tacos.jpg',
     'description': 'Los Mejores Antojos',
     'address': 'Av. 34 sur S/N, Michoacan',
     'money': '$150',
@@ -16,7 +16,7 @@ var data = [{
   },
   {
     'name': 'Venecia',
-    'image': '../assets/images/pasta.jpg',
+    'image': './assets/images/tacos.jpg',
     'description': 'La especialidad Las pastas',
     'address': 'Calle Matamoros No.100, Yucatan',
     'money': '$300',
@@ -24,7 +24,7 @@ var data = [{
   },
   {
     'name': 'Italian´s',
-    'image': '../assets/images/tiramisu.jpg',
+    'image': './assets/images/tacos.jpg',
     'description': 'Postres Italianos',
     'address': 'Av. Revolucion No.60, Queretaro',
     'money': '$100',
@@ -32,7 +32,7 @@ var data = [{
   },
   {
     'name': 'Valle del Colca',
-    'image': '../assets/images/peru.jpg',
+    'image': './assets/images/tacos.jpg',
     'description': 'La mejor comida del Peru',
     'address': 'Av. Independencia No.5000, Monterrey',
     'money': '$400',
@@ -40,7 +40,7 @@ var data = [{
   },
   {
     'name': 'El Refugio',
-    'image': '../assets/images/tacos.jpg',
+    'image': './assets/images/tacos.jpg',
     'description': 'Buffet',
     'address': 'Circuito Nacional No.50, Zacatecas',
     'money': '$200',
@@ -48,7 +48,7 @@ var data = [{
   },
   {
     'name': 'Sushito',
-    'image': '../assets/images/tacos.jpg',
+    'image': './assets/images/tacos.jpg',
     'description': 'Rollos de Sushi',
     'address': 'Calle Aldama S/N, Puebla',
     'money': '$400',
@@ -56,7 +56,7 @@ var data = [{
   },
   {
     'name': 'Fuji',
-    'image': '../assets/images/tacos.jpg',
+    'image': './assets/images/tacos.jpg',
     'description': 'Todo tipo de Comida',
     'address': 'Calle Aldama S/N, Puebla',
     'money': '$200',
